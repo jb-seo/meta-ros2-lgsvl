@@ -1,0 +1,13 @@
+diff --git a/base/startup/surface-manager.sh.in b/base/startup/surface-manager.sh.in
+index ae08130..5661edf 100755
+--- a/base/startup/surface-manager.sh.in
++++ b/base/startup/surface-manager.sh.in
+@@ -41,7 +41,7 @@ else
+ fi
+ 
+ # Compositor geometry
+-export WEBOS_COMPOSITOR_GEOMETRY=$(luna-send -n 1 -a com.webos.surfacemanager luna://com.webos.service.config/getConfigs '{"configNames":["com.webos.surfacemanager.compositorGeometry"]}' | grep -oE "[0-9]+x[0-9]+[\+\-][0-9]+[\+\-][0-9]+r[0-9]+s[0-9]+\.?[0-9]*" || echo "1920x1080+0+0r0s1")
++export WEBOS_COMPOSITOR_GEOMETRY=$(luna-send -n 1 -a com.webos.surfacemanager luna://com.webos.service.config/getConfigs '{"configNames":["com.webos.surfacemanager.compositorGeometry"]}' | grep -oE "[0-9]+x[0-9]+[\+\-][0-9]+[\+\-][0-9]+r[0-9]+s[0-9]+\.?[0-9]*" || echo "800x480+0+0r0s1")
+ if [ $WEBOS_COMPOSITOR_DISPLAYS -gt 1 ]; then
+     export WEBOS_COMPOSITOR_EXTRA_WINDOWS=$(luna-send -n 1 -a com.webos.surfacemanager luna://com.webos.service.config/getConfigs '{"configNames":["com.webos.surfacemanager.compositorExtraWindows"]}' | grep -oE "\[\{.*\}\]" || echo "[]")
+ fi
