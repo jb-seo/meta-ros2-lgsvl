@@ -1,0 +1,25 @@
+From 90c9a9822357af55887cccc823f56fc67e7a4dcf Mon Sep 17 00:00:00 2001
+From: JeongBong Seo <jb.seo@lge.com>
+Date: Wed, 17 Apr 2019 13:27:52 +0900
+Subject: Use asarray function for image data
+
+---
+ object_classifier/object_classification.py | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/object_classifier/object_classification.py b/object_classifier/object_classification.py
+index 51bf98e..d25ee1c 100755
+--- a/object_classifier/object_classification.py
++++ b/object_classifier/object_classification.py
+@@ -92,7 +92,7 @@ class object_classifier(Node):
+ 
+ 
+     def processImage_(self, data):
+-        np_arr = np.fromstring(data.data, np.uint8)
++        np_arr = np.asarray(data.data, dtype=np.uint8)
+         cv_image = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
+ 
+         cv_image = self.resize_image(cv_image, IMAGE_DIM)
+-- 
+2.17.1
+

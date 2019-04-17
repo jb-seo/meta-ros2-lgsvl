@@ -5,6 +5,8 @@ LIC_FILES_CHKSUM = "file://package.xml;beginline=8;endline=8;md5=68b329da9893e34
 
 inherit ros_common ament-python
 
+PR = "r1"
+
 RDEPENDS_${PN} = " \
     python3-core \
     movidius \
@@ -13,6 +15,7 @@ RDEPENDS_${PN} = " \
 SRCREV = "6e3e342f2363bea10460a4acf4a004a3b3490901"
 SRC_URI = " \
     git://github.com/lgsvl/duckietown2.git;subpath=80-deep-learning/object_classifier  \
+    file://0001-Use-asarray-function-for-image-data.patch \
 "
 
 S="${WORKDIR}/object_classifier"
