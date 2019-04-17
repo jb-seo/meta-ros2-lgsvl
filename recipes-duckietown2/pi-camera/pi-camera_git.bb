@@ -3,14 +3,14 @@ SUMMARY = "Pi-camera package for ROS2."
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=8;endline=8;md5=1e7b3bcc2e271699c77c769685058cbe"
 
-inherit ament-python
+inherit ros_common ament-python
 
 RDEPENDS_${PN} = " \
     python3-pyyaml \
     python3-picamera \
     rclpy \
     builtin-interfaces \
-    ros2-sensor-msgs \
+    sensor-msgs \
     duckietown-msgs \
 "
 

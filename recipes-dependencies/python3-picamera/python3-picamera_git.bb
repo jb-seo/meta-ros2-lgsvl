@@ -7,6 +7,8 @@ LIC_FILES_CHKSUM = "file://LICENSE.txt;md5=a5f6282f39d52726bdc1e51d5c4b95c9"
 
 inherit pypi setuptools3
 
+RDEPENDS_${PN} += " python3-image"
+
 SRCREV = "e18d70989eb6c3bf19f4cea859c7401bea3b9048"
 SRC_URI = " \
     git://git@github.com/waveform80/picamera.git;protocol=https \

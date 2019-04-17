@@ -3,16 +3,16 @@ SUMMARY = "Joy package for ROS2."
 LICENSE = "BSD"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=6;endline=6;md5=d566ef916e9dedc494f5f793a6690ba5"
 
-inherit ament
+inherit ros_common ament
 
 DEPENDS = " \
     rclcpp \
-    ros2-sensor-msgs \
+    sensor-msgs \
 "
 
-SRCREV = "1fdd2bf817015d3917d6654eb90c92cb6d949a9a"
+SRCREV = "2cb5fd9a2dceade2771db1e0801251f406dfe106"
 SRC_URI = " \
-    git://git@github.com/ros2/joystick_drivers.git;protocol=https;branch=bouncy;subpath=joy \
+    git://github.com/ros2/joystick_drivers.git;protocol=https;branch=ros2;subpath=joy \
 "
 
 # temporary to check joystick /dev/input/by-path

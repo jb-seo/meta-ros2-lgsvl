@@ -6,4 +6,6 @@ PYPI_PACKAGE = "adafruit-circuitpython-busdevice"
 
 inherit pypi setuptools3
 
+DEPENDS += " python3-setuptools-scm-native"
+
 SRC_URI[sha256sum] = "b7c29f20c1f24a6c302cecc2cee16c247e8be647a01e1934c92e2b507a14360f"

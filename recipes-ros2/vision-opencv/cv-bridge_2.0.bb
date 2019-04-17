@@ -5,9 +5,12 @@ DEPENDS = " \
     opencv (>= 3.1) \
     boost \
     builtin-interfaces \
-    ros2-geometry-msgs \
-    ros2-sensor-msgs \
+    geometry-msgs \
+    sensor-msgs \
     ${PYTHON_PN}-numpy-native \
+    ament-cmake-ros-native \
 "
 
 include vision-opencv.inc
+
+S = "${WORKDIR}/git/${ROS_BPN}"

@@ -3,22 +3,30 @@ SUMMARY = "Duckietown package for ROS2. Provides helper functions used in the Du
 LICENSE = "GPLv3"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=8;endline=8;md5=1e7b3bcc2e271699c77c769685058cbe"
 
-inherit ament pythonpath-insane
+inherit ros_common ament
 
 DEPENDS = " \
     builtin-interfaces \
-    rosidl-default-runtime \
-    rosidl-typesupport-c \
-    ros2-std-msgs \
-    ros2-geometry-msgs \
-    ros2-sensor-msgs \
-    ros2-visualization-msgs \
+    rosidl-default-generators \
+    rosidl-adapter-native \
+    rosidl-generator-c-native \
+    rosidl-generator-cpp-native \
+    rosidl-generator-py-native \
+    python-cmake-module-native \
+    rosidl-typesupport-c-native \
+    rosidl-typesupport-cpp-native \
+    rosidl-typesupport-introspection-c-native \
+    rosidl-typesupport-introspection-cpp-native \
+    std-msgs \
+    geometry-msgs \
+    sensor-msgs \
+    visualization-msgs \
 "
 
 RDEPENDS_${PN} = " \
-    ros2-std-msgs \
-    ros2-geometry-msgs \
-    ros2-sensor-msgs\
+    std-msgs \
+    geometry-msgs \
+    sensor-msgs\
 "
 
 SRCREV = "6e3e342f2363bea10460a4acf4a004a3b3490901"

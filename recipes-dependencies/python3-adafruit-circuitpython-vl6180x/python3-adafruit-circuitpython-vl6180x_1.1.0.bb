@@ -6,6 +6,8 @@ PYPI_PACKAGE = "adafruit-circuitpython-vl6180x"
 
 inherit pypi setuptools3
 
+DEPENDS += " python3-setuptools-scm-native"
+
 SRC_URI[sha256sum] = "4e30f19910d20b35efb7b1e62bf73bbc7ade80e2a36f23eb627c411491fef272"
 
 RDEPENDS_${PN} += " \

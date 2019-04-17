@@ -3,11 +3,11 @@ SUMMARY = "Obstacle avoidance package using range sensors"
 LICENSE = "Apache-2.0"
 LIC_FILES_CHKSUM = "file://package.xml;beginline=8;endline=8;md5=e0cab6c37b6a5e30363d6546a6bccfb5"
 
-inherit ament-python
+inherit ros_common ament-python
 
 RDEPENDS_${PN} = " \
     rclpy \
-    ros2-sensor-msgs \
+    sensor-msgs \
     duckietown-msgs \
      \
 "
