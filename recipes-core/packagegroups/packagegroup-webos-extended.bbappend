@@ -21,3 +21,5 @@ RDEPENDS_${PN}_append = " \
     kernel-module-spi-bcm2835aux \
     kernel-module-xpad \
 "
+
+RDEPENDS_${PN}_remove = "iotivity-node node-inspector nodejs-module-node-red nodejs-module-webos-service com.webos.service.contextintentmgr mojoservicelauncher"
