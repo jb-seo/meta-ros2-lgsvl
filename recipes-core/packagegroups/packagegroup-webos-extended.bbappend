@@ -12,4 +12,12 @@ RDEPENDS_${PN}_append = " \
     packagegroup-duckietown2 \
     packagegroup-duckietown-dependencies \
     com.palm.service.devmode \
+    kernel-module-ff-memless \
+    kernel-module-i2c-dev \
+    kernel-module-joydev \
+    kernel-module-panel-raspberrypi-touchscreen \
+    kernel-module-rpi-ft5406 \
+    kernel-module-spi-bcm2835 \
+    kernel-module-spi-bcm2835aux \
+    kernel-module-xpad \
 "
